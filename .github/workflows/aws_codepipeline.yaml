@@ -34,7 +34,7 @@ jobs:
       # 3. ECR에 Docker 이미지 빌드 및 푸시
       - name: Build and push Docker image to ECR
         env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.resgistry }}
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
           # docker build의 마지막 마침표( . )은 context경로를 의미합니다.
